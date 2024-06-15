@@ -28,6 +28,6 @@ public class EventRepository {
     }
 
     public Optional<Event> findById(int id){
-        return events.stream().filter(event -> event.organizer().id() == id).findAny();
+        return events.stream().filter(event -> event.id() == id).findAny();
     }
 }
