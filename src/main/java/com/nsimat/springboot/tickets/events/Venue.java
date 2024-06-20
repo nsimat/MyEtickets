@@ -1,9 +1,28 @@
 package com.nsimat.springboot.tickets.events;
 
-public record Venue(
-        int id,
-        String name,
-        String street,
-        String city,
-        String country) {
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name ="venues")
+public class Venue {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column
+    private String street;
+
+    @Column
+    private String city;
+
+    @Column
+    private String country;
 }

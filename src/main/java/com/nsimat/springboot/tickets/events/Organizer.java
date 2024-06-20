@@ -1,7 +1,23 @@
 package com.nsimat.springboot.tickets.events;
 
-public record Organizer(
-        int id,
-        String name,
-        String description) {
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Getter
+@Setter
+@Entity
+@Table(name = "organizers")
+public class Organizer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column
+    private String description;
 }
