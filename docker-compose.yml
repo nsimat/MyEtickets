@@ -7,6 +7,6 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: jimkata
-      POSTGRES_PASSWORD: jimkata
+      POSTGRES_PASSWORD: p@SSw0r2
     ports:
       - '5432:5432'
