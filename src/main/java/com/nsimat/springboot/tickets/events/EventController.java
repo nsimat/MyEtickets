@@ -28,7 +28,7 @@ public class EventController {
 
     @GetMapping(path = "/events")
     public List<Event> getEventsByOrganizer(@RequestParam("organizerId") int organizerId){
-        return eventRepository.findByOrganizeId(organizerId);
+        return eventRepository.findByOrganizerId(organizerId);
     }
 
     @GetMapping(path = "/events/{id}")
